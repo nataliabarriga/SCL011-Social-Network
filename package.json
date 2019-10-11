@@ -1,29 +1,34 @@
 {
-  "name": "scl011-social-network",
+  "name": "social-network",
   "version": "1.0.0",
-  "description": "Social Network Proyect for laboratoria",
-  "main": "src/index.html",
+  "description": "red social para amantes de las papas fritas",
+  "main": "index.html",
   "scripts": {
-    "test": "jest"
+    "test": "jest--coverage",
+    "eslint": "eslint --ext .js src/ test/",
+    "htmlhint": "htmlhint src/* . html",
+    "pretest": "npm run eslint && npm run htmlhint",
+    "deploy": "gh-pages -d src/*"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/irenemonzon/SCL011-Social-Network.git"
+    "url": "git+https://github.com/nataliabarriga/SCL011-Social-Network.git"
   },
   "keywords": [
+    "red",
     "social",
     "network",
-    "scl",
-    "app",
-    "011"
+    "papas",
+    "fritas"
   ],
-  "author": "laboratoria",
+  "author": "Natalia Barriga, Irene Monzon y Daniela Olivares",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/irenemonzon/SCL011-Social-Network/issues"
+    "url": "https://github.com/nataliabarriga/SCL011-Social-Network/issues"
   },
-  "homepage": "https://github.com/irenemonzon/SCL011-Social-Network#readme",
+  "homepage": "https://github.com/nataliabarriga/SCL011-Social-Network#readme",
   "dependencies": {
+    "@babel/core": "^7.6.4",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^24.9.0",
@@ -33,8 +38,5 @@
     "gh-pages": "^2.1.1",
     "htmlhint": "^0.11.0",
     "jest": "^24.9.0"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.6.4"
   }
 }
