@@ -1,0 +1,6 @@
+{
+    "Plugins": 
+    [
+        " @babel/plugin-transform-modules-commonjs"
+    ]
+}
