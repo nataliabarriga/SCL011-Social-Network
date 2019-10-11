@@ -1,4 +1,3 @@
-
 const buttonregister=document.getElementById("registeruser");
 buttonregister.addEventListener("click",() =>{
 
@@ -33,7 +32,7 @@ buttonenter.addEventListener("click",()=>{
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
-      const user=document.getElementById("contenido");
+      const user=document.getElementById("root");
       user.innerHTML="Usuario activo";
       var displayName = user.displayName;
       var email = user.email;
@@ -48,5 +47,14 @@ firebase.auth().onAuthStateChanged(function(user) {
       // ...
     }
   });
+
+const closebutton=document.getElementById("close");
+closebutton.addEventListener("click",()=>{
+   
+ firebase.auth().signOut()
+ .then(function(){
+  })
+     
+})
 
 
