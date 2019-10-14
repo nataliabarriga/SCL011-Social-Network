@@ -1,6 +1,6 @@
-const buttonRegister=document.getElementById("registeruser");
+const buttonRegister = document.getElementById("registerUser");
 buttonRegister.addEventListener("click",() =>{
-
+  
   let email=document.getElementById("email").value;
   let password=document.getElementById("password").value;
 
@@ -8,18 +8,16 @@ buttonRegister.addEventListener("click",() =>{
   .then(function(){
     verificar()
   })
+  /* Promesa en caso de que haya un error */
   .catch(function(error) {
-       // Handle Errors here.
-       var errorCode = error.code;
-       var errorMessage = error.message;
-       console.log(errorCode);
-       console.log(errorMessage);
-       // ...
+  /* Handle Errors here */
+    var errorCode = error.code;
+    var errorMessage = error.message;
   });
 })
 
-const buttonenter=document.getElementById("userenter");
-buttonenter.addEventListener("click",()=>{
+const buttonEntry = document.getElementById("userEntry");
+buttonEntry.addEventListener("click",()=>{
 
    let email2=document.getElementById("email2").value;
    let password2=document.getElementById("password2").value;
@@ -36,8 +34,6 @@ buttonenter.addEventListener("click",()=>{
 firebase.auth().onAuthStateChanged(function(user) {
    if (user) {
      // User is signed in.
-     const user=document.getElementById("root");
-     user.innerHTML="Usuario activo";
      var displayName = user.displayName;
      var email = user.email;
      var emailVerified = user.emailVerified;
