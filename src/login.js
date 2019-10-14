@@ -1,20 +1,3 @@
-import { principal} from './Viewmain.js';
-
-const init = () => {
-   
-    principal()
-   
- }
- 
-window.addEventListener('load', init);
-
-
-
-
-
-
-/*
-
 const buttonenter=document.getElementById("userenter");
 buttonenter.addEventListener("click",()=>{
 
@@ -49,28 +32,3 @@ buttonenter.addEventListener("click",()=>{
       });
 
 })
-
-
-
-const closebutton=document.getElementById("close");
-closebutton.addEventListener("click",()=>{
-firebase.auth().signOut()
-.then(function(){
- })
-})
-
-function verificar(){
-  var user = firebase.auth().currentUser;
-  user.sendEmailVerification()
-  .then(function() {
-      console.log("Enviando correo...");
-      
-// Email sent.
-  }).catch(function(error) {
-      console.log(error);
-      
-// An error happened.
-  });
-}*/
-
-
