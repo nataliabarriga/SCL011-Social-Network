@@ -1,4 +1,7 @@
-let firebaseConfig = {
+
+export const initfirebase=()=> {
+const firebaseConfig = 
+    {
     apiKey: "AIzaSyCfBFJySWJgKZxbK8vSMlrB77nAEemKopw",
     authDomain: "socialnetwork-34ac2.firebaseapp.com",
     databaseURL: "https://socialnetwork-34ac2.firebaseio.com",
@@ -11,3 +14,6 @@ let firebaseConfig = {
    // Initialize Firebase
    firebase.initializeApp(firebaseConfig);
    firebase.analytics();
+   
+
+}

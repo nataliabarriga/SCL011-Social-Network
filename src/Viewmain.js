@@ -1,3 +1,4 @@
+
  import { register} from './Viewregister.js';
  import { login} from './Viewlogin.js';
  
@@ -17,12 +18,12 @@
     `
     const btnregister=document.getElementById("btnRegistry");
     btnregister.addEventListener('click', ()=>{
-        register()
+        register();
     })
 
     const btnlogin=document.getElementById("btnLogin");
     btnlogin.addEventListener('click', ()=>{
-        login()
+        login();
     })
 
     }

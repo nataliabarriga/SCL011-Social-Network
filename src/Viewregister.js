@@ -1,4 +1,4 @@
-import {registeruser} from './auth.js';
+
 
 export const register=()=> {
 
@@ -15,8 +15,12 @@ export const register=()=> {
 const buttonregister=document.getElementById("btnRegistryOk");
 buttonregister.addEventListener("click",() =>{
 
+    
     let email=document.getElementById("mailRegistry").value;
     let password=document.getElementById("passwordRegistry").value; 
-registeruser(email,password);
+    
+
+    registeruser(email,password);
+    console.log('usuario registrado');
 })
 }
