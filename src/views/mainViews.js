@@ -5,24 +5,26 @@ export const initial = () => {
     const root = document.getElementById("root");
     root.innerHTML = 
     `<button id="btnMenu">Menú</button>
-    <div class="carousel">
+        <div class="containerCarousel">
         <h2>Destacados</h2>
-        <div><img><h3>Local 1</h3></div>
-        <div><img><h3>Local 2</h3></div>
-        <div><img><h3>Local 3</h3></div>
-    </div>
-    <div class="carousel">
+        <div class="carousel">
+            <div class="local"><img src="img/pf01.jpg"></div>
+            <div class="local"><img src="img/pf02.jpg"></div>
+            <div class="local"><img src="img/pf03.jpg"></div>
+        </div>
         <h2>Más Baratos</h2>
-        <div><img></div>
-        <div><img></div>
-        <div><img></div>
-    </div>
-    <div class="carousel">
+        <div class="carousel">
+            <div class="local"><img src="img/pf04.jpg"></div>
+            <div class="local"><img src="img/pf05.jpg"></div>
+            <div class="local"><img src="img/pf06.jpg"></div>
+        </div>
         <h2>Tus favoritos</h2>
-        <div><img></div>
-        <div><img></div>
-        <div><img></div>
-    </div>
+        <div class="carousel">
+            <div class="local"><img src="img/pf07.jpg"></div>
+            <div class="local"><img src="img/pf08.jpg"></div>
+            <div class="local"><img src="img/pf09.jpg"></div>
+        </div>
+        </div>
     <button id="btnAll">Ver Todos</button>`
 
     const btnMenu = document.getElementById("btnMenu");
