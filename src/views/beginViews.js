@@ -1,5 +1,6 @@
 import {registerUser} from '../models/begin.js'
 import {loginUser} from '../models/begin.js'
+import {close} from './mainViews.js'
 
 export const principal = ()=> {
     const root = document.getElementById("root");
@@ -77,5 +78,6 @@ export const login = () => {
         let mailLogin = document.getElementById("mailLogin").value;
         let passwordLogin = document.getElementById("passwordLogin").value;
         loginUser(mailLogin,passwordLogin);
+        close();
     })
 }

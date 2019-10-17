@@ -11,5 +11,7 @@ let firebaseConfig = {
        // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
+    
+    let database =firebase.database();
 
 
