@@ -1,6 +1,3 @@
-// import {register} from '../views/beginViews.js'
-// import {login} from '../views/beginViews.js'
-
 export const registerUser = (nameRegistry, mailRegistry, passwordRegistry) =>{
     firebase.auth().createUserWithEmailAndPassword(mailRegistry, passwordRegistry)
     .then (function(){

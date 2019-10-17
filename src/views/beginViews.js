@@ -1,6 +1,6 @@
 import {registerUser} from '../models/begin.js'
 import {loginUser} from '../models/begin.js'
-import {close} from './mainViews.js'
+import {initial} from './mainViews.js'
 
 export const principal = ()=> {
     const root = document.getElementById("root");
@@ -43,9 +43,8 @@ export const register = () =>{
 }
 
 const modalRegistry = () =>{
-    const container=document.getElementById("root");
-    container.innerHTML = "";
-    container.innerHTML += 
+    const root =document.getElementById("root");
+    root.innerHTML = 
     `<div class="modalContainer">
     <div class="modalInfo">
       <h1>¡Muchas Gracias!</h1>
@@ -68,6 +67,7 @@ export const login = () => {
         let mailLogin = document.getElementById("mailLogin").value;
         let passwordLogin = document.getElementById("passwordLogin").value;
         loginUser(mailLogin,passwordLogin);
-        close();
+        initial();
+
     })
 }
