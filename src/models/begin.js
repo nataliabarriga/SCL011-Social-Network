@@ -1,4 +1,3 @@
-
 export const registerUser = (nameRegistry, mailRegistry, passwordRegistry) =>{
     firebase.auth().createUserWithEmailAndPassword(mailRegistry, passwordRegistry)
     .then (function(){
