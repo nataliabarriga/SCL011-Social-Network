@@ -40,13 +40,15 @@ function observer(){
     firebase.auth().onAuthStateChanged(function(user) {
         if(user){
             console.log("Existe Usuario Activo");
-            var displayName = user.displayName;
-            var email = user.email;
-            var emailVerified = user.emailVerified;
-            var photoURL = user.photoURL;
-            var isAnonymous = user.isAnonymous;
-            var uid = user.uid;
-            var providerData = user.providerData;
+            let displayName = user.displayName;
+            let email = user.email;
+            console.log(email);
+            let emailVerified = user.emailVerified;
+            console.log(emailVerified);
+            let photoURL = user.photoURL;
+            let isAnonymous = user.isAnonymous;
+            let uid = user.uid;
+            let providerData = user.providerData;
         }  
         else{
             console.log("No existe usuario activo");
