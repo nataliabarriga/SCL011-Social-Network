@@ -4,7 +4,7 @@ import {principal} from './beginViews.js';
 export const initial = () => {
     const root = document.getElementById("root");
     root.innerHTML = 
-    `<button id="btnMenu">Menú</button>
+    `<button id="btnMenu"><img src="img/menu.png" class="imgMenu"></button>
         <div class="containerCarousel">
         <h2>Destacados</h2>
         <div class="carousel">
@@ -37,13 +37,13 @@ const menu = () => {
     const root = document.getElementById("root");
     root.innerHTML = 
     `<div class="modalMenuContainer">
-        <div class="modalMenuInfo">
-            <button id="btnBack">Atrás</button>
-            <img>
-            <h4>Nombre</h4>
-            <button id="btnFavorites">Mis favoritos</button>
-            <button id="btnClose">Cerrar Sesión</button>
-        </div>
+    <div class="modalMenuInfo">
+        <button id="btnBack"><img src="img/arrow.png" class="imgArrow"></button>
+        <img src="img/user.png" class="imgUser">
+        <h4>Nombre</h4>
+        <button id="btnFavorites">Mis favoritos</button>
+        <button id="btnClose">Cerrar Sesión</button>
+    </div>
     </div>`
 
     const btnClose = document.getElementById("btnClose");
