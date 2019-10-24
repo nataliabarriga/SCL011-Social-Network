@@ -10,16 +10,16 @@ export const viewpost=()=>{
     root.innerHTML = `
 
     <div class="post">
-    <textarea id="escrito" cols="20" rows="15"  placeholder="Ingrese mensaje" ></textarea><br>
-    <button id="write">Publicar</button>
-    <button id="back">Atras</button>
+        <textarea id="escrito"  rows="4"  placeholder="Ingrese mensaje" ></textarea><br>
+        <button id="write">Publicar</button>
+       <button id="back">Atras</button> 
     </div>
     <div id="lectura">
     </div>
     `
     const read=document.getElementById("lectura");
     readpost(read);
-    
+
     const btnwrite=document.getElementById("write");
     btnwrite.addEventListener("click",()=>{
 

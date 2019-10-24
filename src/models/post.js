@@ -16,7 +16,7 @@ export const writepost=(post2)=>{
 export const printPost=(valor)=>{
     
     return `
-    <div class="post">
+    <div class="postear">
     <h3>${valor}</h3>
     <button id="edit">Editar</button>
     <button id="delete">Borrar</button>
@@ -42,7 +42,7 @@ export const readpost=(read)=>{
         a.forEach((valor)=>{
            
             read.innerHTML +=printPost(valor);
-            
+
             
         });
 
