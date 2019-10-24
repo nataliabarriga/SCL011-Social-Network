@@ -5,26 +5,84 @@ export const initial = () => {
     const root = document.getElementById("root");
     root.innerHTML = 
     `<button id="btnMenu"><img src="img/menu.png" class="imgMenu"></button>
-        <div class="containerCarousel">
-        <h2>Destacados</h2>
+    <div class="containerCarousel">
+        <div class="titleCarousel">
+            <h2>Destacados</h2>
+        </div>
         <div class="carousel">
-            <div class="local"><img src="img/pf01.jpg"></div>
-            <div class="local"><img src="img/pf02.jpg"></div>
-            <div class="local"><img src="img/pf03.jpg"></div>
+            <div class="localCarousel">
+                <a href="">
+                    <img src="img/pf01.jpg">
+                </a>
+            </div>
+            <div class="localCarousel">
+                <a href="">
+                    <img src="img/pf02.jpg">
+                </a>
+            </div>
+            <div class="localCarousel">
+                <a href="">
+                    <img src="img/pf03.jpg">
+                </a>
+            </div>
+            <div class="localCarousel">
+                <a href="">
+                    <img src="img/pf010.jpg">
+                </a>
+            </div>    
         </div>
-        <h2>Más Baratos</h2>
+        <div class="titleCarousel">
+            <h2>Más Baratos</h2>
+        </div>
         <div class="carousel">
-            <div class="local"><img src="img/pf04.jpg"></div>
-            <div class="local"><img src="img/pf05.jpg"></div>
-            <div class="local"><img src="img/pf06.jpg"></div>
+            <div class="localCarousel">
+                <a href="">
+                    <img src="img/pf04.jpg">
+                </a>
+            </div>
+            <div class="localCarousel">
+                <a href="">
+                    <img src="img/pf05.jpg">
+                </a>
+            </div>
+            <div class="localCarousel">
+                <a href="">
+                    <img src="img/pf06.jpg">
+                </a>
+            </div>
+            <div class="localCarousel">
+                <a href="">
+                    <img src="img/pf011.jpg">
+                </a>
+            </div>    
         </div>
-        <h2>Tus favoritos</h2>
+        <div class="titleCarousel">
+            <h2>Mis Favoritos</h2>
+        </div>
         <div class="carousel">
-            <div class="local"><img src="img/pf07.jpg"></div>
-            <div class="local"><img src="img/pf08.jpg"></div>
-            <div class="local"><img src="img/pf09.jpg"></div>
-        </div>
-        </div>
+            <div class="localCarousel">
+                <a href="">
+                    <img src="img/pf07.jpg">
+                </a>
+            </div>
+            <div class="localCarousel">
+                <a href="">
+                    <img src="img/pf08.jpg">
+                </a>
+            </div>
+            <div class="localCarousel">
+                <a href="">
+                    <img src="img/pf09.jpg">
+                </a>
+            </div> 
+            <div class="localCarousel">
+                <a href="">
+                    <img src="img/pf012.jpg">
+                </a>
+            </div>   
+        </div> 
+    </div>
+     
     <button id="btnAll">Ver Todos</button>`
 
     const btnMenu = document.getElementById("btnMenu");
