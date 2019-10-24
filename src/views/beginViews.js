@@ -5,10 +5,12 @@ import {initial} from './mainViews.js'
 export const principal = ()=> {
     const root = document.getElementById("root");
     root.innerHTML = 
-    `<div class="center">
-        <img>
+    `<div class="backgroundBox">
+    <div class="center">
+        <img src="img/plogo2.png" class="logo">
         <button id="btnRegistry">Regístrate</button>
         <button id="btnLogin">Iniciar Sesión</button>
+    </div>
     </div>`
 
     const btnRegistry=document.getElementById("btnRegistry");
@@ -25,12 +27,15 @@ export const principal = ()=> {
 export const register = () =>{
     const root =document.getElementById("root");
     root.innerHTML =
-    `<form class="center">
+    `<div class="backgroundBox">
+    <form class="center">
+    <img src="img/plogo2.png" class="logo">
     <input id="nameRegistry" type="text" placeholder="Ingresa tu Nombre">
     <input id="mailRegistry" type="email" placeholder="Ingresa tu E-mail">
-    <input id="passwordRegistry" type="password" placeholder="Ingresa tu contraseña">
+    <input id="passwordRegistry" type="password" placeholder="Ingresa tu Contraseña">
     <button id="btnRegistryOk">Registrarse</button>
-    </form>`
+    </form>
+    </div>`
 
     const btnRegistryOk = document.getElementById("btnRegistryOk");
     btnRegistryOk.addEventListener("click", () => {
@@ -43,17 +48,19 @@ export const register = () =>{
 }
 
 const modalRegistry = () =>{
-    const root =document.getElementById("root");
-    root.innerHTML = 
+    const container=document.getElementById("root");
+    container.innerHTML = "";
+    container.innerHTML +=
+
     `<div class="modalContainer">
+            <button id="closeModal" class="closeModal">x</button>
     <div class="modalInfo">
-   
-      <button id="closeModal" class="closeModal">x</button>
-      <h1>¡Muchas Gracias!</h1>
-      <p>Te enviamos un correo para que puedas validar tu cuenta</p>
+            <h1>¡Muchas Gracias!</h1>  
+            <img src="img/plogo2.png" class="logoModal">
+            <p>Te enviamos un correo para que puedas validar tu cuenta</p>
     </div>
-    </div>
-   `
+    </div>`
+
    const btncloseModal = document.getElementById("closeModal");
     btncloseModal.addEventListener("click", () => {
     
@@ -66,11 +73,15 @@ const modalRegistry = () =>{
 export const login = () => {
     const root =document.getElementById("root");
     root.innerHTML = 
-    `<form class="center">
-       <input id="mailLogin" type="email" placeholder="Ingresa tu E-mail">
-       <input id="passwordLogin" type="password" placeholder="Ingresa tu contraseña">
-       <button id="btnLoginOk">Iniciar Sesión</button>
-    </form>`
+
+        `<div class="backgroundBox">
+                <form class="center">
+                <img src="img/plogo2.png" class="logo">
+                 <input id="mailLogin" type="email" placeholder="Ingresa tu E-mail">
+                <input id="passwordLogin" type="password" placeholder="Ingresa tu contraseña">
+                <button id="btnLoginOk">Iniciar Sesión</button>
+                </form>
+        </div>`
 
     const btnLoginOk = document.getElementById("btnLoginOk");
     btnLoginOk.addEventListener("click", () =>{
