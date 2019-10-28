@@ -1,16 +1,29 @@
-body, html{
+html{
+    box-sizing: border-box;
+}
+*,*:after,*::before{
+    box-sizing: inherit;
+}
+
+body{
     margin: 0;
     padding: 0;
     position: absolute;
     top: 0;
     width: 100%;
     font-weight: 400;
-    background-color: black;
+    background-color: white;
+}
+.contenedor{
+    max-width: 90%;
+    margin: 0 auto; /*contenido centrar*/
+
 }
 #root{
-    width: 100%;
-    background-color: black;
+    background-color: white;
+    padding: 30px;
 }
+
 .center{
     width: 90%;
     height: 100%;
@@ -204,4 +217,31 @@ h2{
 .localCarousel img{
     height: 100%;
     border-radius: 15px;
+}
+.post{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 10px; 
+    margin:10px 0;
+}
+.post textarea{
+    display: flex;
+    justify-content: flex-start;
+    width:70%;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 20px;
+}
+.post button{   
+    width:20%;
+    display: block;
+}
+.postear{
+    border: 1px solid #000000;
+    background-color:lightblue;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 10px;
 }

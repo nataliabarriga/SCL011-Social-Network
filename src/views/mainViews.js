@@ -1,10 +1,13 @@
 import {closeSesion} from '../models/main.js'
 import {principal} from './beginViews.js';
+import{viewpost}from './postViews.js';
 
 export const initial = () => {
     const root = document.getElementById("root");
     root.innerHTML = 
-    `<button id="btnMenu"><img src="img/menu.png" class="imgMenu"></button>
+    `
+    <button id="btnbest">Destacados</button>       
+    <button id="btnMenu"><img src="img/menu.png" class="imgMenu"></button>
     <div class="containerCarousel">
         <div class="titleCarousel">
             <h2>Destacados</h2>
@@ -89,6 +92,13 @@ export const initial = () => {
     btnMenu.addEventListener("click", ()=>{
         menu();
     })
+
+    const btnbest = document.getElementById("btnbest");
+    btnbest.addEventListener("click", ()=>{
+
+        viewpost();
+    })
+    
 }
 
 const menu = () => {

@@ -9,7 +9,11 @@ let firebaseConfig = {
         measurementId: "G-LTTK2ZRGJG"
     };
        // Initialize Firebase
+  
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
+    let database =firebase.firestore();  
+
+
 
 
