@@ -1,5 +1,6 @@
 import {closeSesion} from '../models/main.js'
 import {principal} from './beginViews.js';
+import{viewpost}from './postViews.js';
 
 export const initial = () => {
     const root = document.getElementById("root");
@@ -11,29 +12,28 @@ export const initial = () => {
         </div>
         <div class="carousel">
             <div class="localCarousel">
-                <a href="">
+                <button id="btnLocal" class="btnLocal">
                     <img src="img/pf01.jpg">
                     <h3>Local 1</h3>
-                </a>
-                
+                </button>
             </div>
             <div class="localCarousel">
-                <a href="">
+                <button id="btnLocal" class="btnLocal">
                     <img src="img/pf02.jpg">
                     <h3>Local 2</h3>
-                </a>
+                </button>
             </div>
             <div class="localCarousel">
-                <a href="">
+                <button id="btnLocal" class="btnLocal">
                     <img src="img/pf03.jpg">
                     <h3>Local 3</h3>
-                </a>
+                </button>
             </div>
             <div class="localCarousel">
-                <a href="">
+                <button id="btnLocal" class="btnLocal">
                     <img src="img/pf010.jpg">
                     <h3>Local 4</h3>
-                </a>
+                </button>
             </div>    
         </div>
         <div class="titleCarousel">
@@ -41,28 +41,28 @@ export const initial = () => {
         </div>
         <div class="carousel">
             <div class="localCarousel">
-                <a href="">
+                <button id="btnLocal" class="btnLocal">
                     <img src="img/pf04.jpg">
                     <h3>Local 1</h3>
-                </a>
+                </button>
             </div>
             <div class="localCarousel">
-                <a href="">
+                <button id="btnLocal" class="btnLocal">
                     <img src="img/pf05.jpg">
                     <h3>Local 2</h3>
-                </a>
+                </button>
             </div>
             <div class="localCarousel">
-                <a href="">
+                <button id="btnLocal" class="btnLocal">
                     <img src="img/pf06.jpg">
                     <h3>Local 3</h3>
-                </a>
+                </button>
             </div>
             <div class="localCarousel">
-                <a href="">
+                <button id="btnLocal" class="btnLocal">
                     <img src="img/pf011.jpg">
                     <h3>Local 4</h3>
-                </a>
+                </button>
             </div>    
         </div>
         <div class="titleCarousel">
@@ -70,28 +70,28 @@ export const initial = () => {
         </div>
         <div class="carousel">
             <div class="localCarousel">
-                <a href="">
+                <button id="btnLocal" class="btnLocal">
                     <img src="img/pf07.jpg">
                     <h3>Local 1</h3>
-                </a>
+                </button>
             </div>
             <div class="localCarousel">
-                <a href="">
+                <button id="btnLocal" class="btnLocal"">
                     <img src="img/pf08.jpg">
                     <h3>Local 2</h3>
-                </a>
+                </button>
             </div>
             <div class="localCarousel">
-                <a href="">
+                <button id="btnLocal" class="btnLocal">
                     <img src="img/pf09.jpg">
                     <h3>Local 3</h3>
-                </a>
+                </button>
             </div> 
             <div class="localCarousel">
-                <a href="">
+                <button id="btnLocal" class="btnLocal">
                     <img src="img/pf012.jpg">
                     <h3>Local 4</h3>
-                </a>
+                </button>
             </div>   
         </div> 
     </div>
@@ -107,6 +107,11 @@ export const initial = () => {
     btnAll.addEventListener("click", () => {
         all();
     })
+    const btnLocal = document.getElementById("btnLocal");
+    btnLocal.addEventListener("click", ()=>{
+        viewpost();  
+    })
+    
 }
 
 const menu = () => {

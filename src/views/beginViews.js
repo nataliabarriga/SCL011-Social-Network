@@ -51,18 +51,21 @@ const modalRegistry = () =>{
     const container=document.getElementById("root");
     container.innerHTML = "";
     container.innerHTML +=
+
     `<div class="modalContainer">
-    <button id="closeModal" class="closeModal">x</button>
+            <button id="closeModal" class="closeModal">x</button>
     <div class="modalInfo">
-       <h1>¡Muchas Gracias!</h1>
-       <img src="img/plogo2.png" class="logoModal">
-       <p>Te ha enviado un correo para que puedas validar tu cuenta</p>
+            <h1>¡Muchas Gracias!</h1>  
+            <img src="img/plogo2.png" class="logoModal">
+            <p>Te enviamos un correo para que puedas validar tu cuenta</p>
     </div>
     </div>`
 
-    const btncloseModal = document.getElementById("closeModal");
-        btncloseModal.addEventListener("click", () => {
-        login();
+   const btncloseModal = document.getElementById("closeModal");
+    btncloseModal.addEventListener("click", () => {
+    
+    login();
+    
     })
 }
 
@@ -70,14 +73,15 @@ const modalRegistry = () =>{
 export const login = () => {
     const root =document.getElementById("root");
     root.innerHTML = 
-    `<div class="backgroundBox">
-    <form class="center">
-    <img src="img/plogo2.png" class="logo">
-       <input id="mailLogin" type="email" placeholder="Ingresa tu E-mail">
-       <input id="passwordLogin" type="password" placeholder="Ingresa tu contraseña">
-       <button id="btnLoginOk">Iniciar Sesión</button>
-    </form>
-    </div>`
+
+        `<div class="backgroundBox">
+                <form class="center">
+                <img src="img/plogo2.png" class="logo">
+                 <input id="mailLogin" type="email" placeholder="Ingresa tu E-mail">
+                <input id="passwordLogin" type="password" placeholder="Ingresa tu contraseña">
+                <button id="btnLoginOk">Iniciar Sesión</button>
+                </form>
+        </div>`
 
     const btnLoginOk = document.getElementById("btnLoginOk");
     btnLoginOk.addEventListener("click", () =>{
