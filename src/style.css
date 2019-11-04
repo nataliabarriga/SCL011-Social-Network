@@ -1,27 +1,16 @@
-html{
-    box-sizing: border-box;
-}
-*,*:after,*::before{
-    box-sizing: inherit;
-}
-
-body{
+body, html{
     margin: 0;
     padding: 0;
     position: absolute;
     top: 0;
     width: 100%;
     font-weight: 400;
-    background-color: white;
+    background-color:black;
 }
-.contenedor{
-    max-width: 90%;
-    margin: 0 auto; /*contenido centrar*/
 
-}
 #root{
-    background-color: white;
-    padding: 30px;
+    width: 100%;
+    background-color: black;
 }
 
 .center{
@@ -127,11 +116,11 @@ input{
     margin: 60px 0 20px 0;
 }
 
-#btnMenu, #btnBack{
-    width: 50px;
-    height: 50px;
-    top: 20px;
-	left: 20px;
+#btnMenu, #btnBackModal, #btnBackMain{
+    width: 40px;
+    height: 40px;
+    top: 25px;
+	left: 30px;
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -143,7 +132,7 @@ input{
 	cursor: pointer;
 }
 
-#btnBack{
+#btnBackModal, #btnBackMain{
     background: none;
 }
 
@@ -178,12 +167,17 @@ h4{
     font-size: 20px;
 }
 /*** Pagina inicial ***/
+#btnbest{
+    color:yellow;
+    cursor: pointer;
+}
 .titleCarousel{
     width: 90%;
     height: 20px;
-    padding: 5px 10px 8px 10px;
+    padding: 0 5%;
     display: flex;
     align-content: center;
+    margin-bottom: 5px;
 }
 
 h2{
@@ -201,32 +195,149 @@ h2{
 }
 
 .carousel{
+    width: 85%;
     height: 120px;
+    padding: 10px 5%;
     display: flex;
     flex-direction: nowrap;
     overflow-x: auto;
-    padding: 3px 0 3px 0;
 }
 
 .localCarousel {
     width: 120px;
     height: 120px;
-    margin-right: 17px;
+    margin-right: 5%;
+    position: relative;
+}
+.btnLocal{
+    width: 120px;
+    height: 120px;
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: 100;
+    text-decoration: none;
 }
 
 .localCarousel img{
     height: 100%;
     border-radius: 15px;
 }
+
+.localCarousel h3{
+    width: 90%;
+    padding: 0 10%;
+    position: absolute;
+    bottom:0;
+}
+
+/*** All ***/
+.titleCarouselAll, .titleLocalList{
+    width: 90%;
+    height: 20px;
+    padding: 0 5%;
+    display: flex;
+    align-content: center;
+}
+.titleLocalList{
+    margin-bottom: 10px;
+}
+
+.titleCarouselAll h2, .titleLocalList h2{
+    color: white;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.containerCarouselAll, .containerlocalList {
+    width: 90%;
+    height: auto;
+    margin: 0;
+    padding: 60px 5% 0 5%;
+}
+
+.carouselAll{
+    width: 90%;
+    height: 80px;
+    display: flex;
+    flex-direction: nowrap;
+    overflow-x: auto;
+    padding: 10px 5%;
+}
+
+.localCarouselAll {
+    width: 20%;
+    margin-right: 6%;
+    text-align: center;
+}
+
+.localCarouselAll img{
+    height: 75%;
+    border-radius: 15px;
+}
+
+.localCarouselAll h3{
+    color: white;
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: 100;
+    margin: 0;
+}
+
+.containerlocalList{
+    padding: 10px 5%;
+}
+
+.localBox{
+    width: 90%;
+    height: 120px;
+    margin: 10px 0;
+    padding: 0 5%;
+    position: relative;
+}
+
+.localBox img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.localName{
+    width: 90%;
+    height: 35px;
+    padding: 0 5%;
+    background-color: black;
+    opacity: 0.8;
+    position: absolute;
+    bottom:0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.localName h3{
+    color: white;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+/* POST */
 .post{
+    border: 1px solid red;
     display: flex;
     justify-content: space-between;
-    border: 1px solid #000000;
     border-radius: 10px;
     padding: 10px; 
     margin:10px 0;
 }
 .post textarea{
+    border: 1px solid red;
     display: flex;
     justify-content: flex-start;
     width:70%;
@@ -234,11 +345,13 @@ h2{
     border-radius: 10px;
     padding: 20px;
 }
-.post button{   
+.post button{
+    border: 1px solid red;
     width:20%;
     display: block;
 }
 .postear{
+    border: 1px solid red;
     border: 1px solid #000000;
     background-color:lightblue;
     border-top-left-radius: 10px;

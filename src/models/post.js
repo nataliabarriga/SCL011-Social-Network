@@ -13,7 +13,6 @@ export const writepost=(post2)=>{
     .catch(function(error) {
         console.error("Error adding document: ", error);
     });
-
 };
 
 //Leer Post
