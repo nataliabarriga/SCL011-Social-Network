@@ -1,7 +1,7 @@
 import{initial}from './mainViews.js';
 import{writepost} from '../models/post.js';
 import{readpost} from '../models/post.js';
-
+import{deletepost} from '../models/post.js';
 
 
 export const viewpost=()=>{
@@ -11,8 +11,8 @@ export const viewpost=()=>{
 
     <div class="post">
         <textarea id="escrito"  rows="4"  placeholder="Ingrese mensaje" ></textarea><br>
-        <button id="write">Publicar</button>
-       <button id="back">Atras</button> 
+         <button id="write">Publicar</button>
+         <button id="back">Atras</button> 
     </div>
     <div id="lectura">
     </div>
@@ -38,5 +38,33 @@ export const viewpost=()=>{
         initial()
     })
    
+}
+
+
+export const printPost=(valor,index)=>{
+    
+    return `
+    <div class="postear">
+    <h3>${valor}</h3>
+    <button id="edit${index}">Editar</button>
+    <button id="delete${index}" >Borrar</button>
+    </div> `; 
+}
+
+
+
+
+export const btnpost=(id,index)=>{
+
+    const btndelete=document.getElementById("delete"+index);
+    console.log('Eventboton'+index+' creado');
+    btndelete.addEventListener("click",()=>{
+        
+        console.log("borrando post");
+        console.log(index);
+
+       deletepost(id);
+
+    })
 }
 
