@@ -45,19 +45,21 @@ export const printPost=(valor,index)=>{
     </div> `; 
 }
 
-
-
-
 export const btnpost=(id,index)=>{
 
     const btndelete=document.getElementById("delete"+index);
-    console.log('Eventboton'+index+' creado');
+   
     btndelete.addEventListener("click",()=>{
         
+        
+       /* let confirmpost = confirm("¿Esta seguro/a de eliminar su publicación?");
+       
+        if (confirmpost== true) {
+        deletepost(id);
+        
+         } */
         console.log("borrando post");
-        console.log(index);
-
-       deletepost(id);
+      deletepost(id);
 
     })
 }

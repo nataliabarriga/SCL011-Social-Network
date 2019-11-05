@@ -26,8 +26,6 @@ export const readpost=(read)=>{
         
             datapost.push(`${doc.data().post}`);
             datapostid.push(`${doc.id}`);
-            //console.log(`${doc.id} => ${doc.data().post}`);
-            //console.log(datapost);
             console.log(datapostid);
         });
        
