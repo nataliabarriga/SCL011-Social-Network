@@ -9,25 +9,20 @@
 </head>
 <body>
    <div id="root">
-      <div>
-         <img> 
+      <div class="imgLocalInfo">
+         <img src="img/pf01.jpg"> 
       </div> 
-      <div>
-         <button>Comentarios</button>
-         <button>Información</button>
+      <div class="containerButtons">
+         <button class="comments">Comentarios</button>
+         <button class="information">Información</button>
       </div>
-      <div>
-         
-
+      <div class="containerPost">
+         <div id="lectura"></div>
       </div>
-       
-         <div class="post">
-            <textarea id="escrito"  rows="4"  placeholder="Ingrese mensaje" ></textarea><br>
-            <button id="write">Publicar</button>
-            <button id="back">Atras</button> 
-         </div>
-         <div id="lectura">
-         </div>  
+    <div class="centerBtn">
+        <button id="btnComment" class="btnComment">+</button> 
+    </div>
+   
    </div>
    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-analytics.js"></script>

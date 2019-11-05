@@ -13,7 +13,6 @@ export const writepost=(post2)=>{
 };
 
 export const printPost=(valor)=>{
-
     return `
     <div class="postear">
     <h3>${valor}</h3>

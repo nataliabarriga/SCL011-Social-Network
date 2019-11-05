@@ -1,6 +1,7 @@
 import {registerUser} from '../models/begin.js'
 import {loginUser} from '../models/begin.js'
 import {initial} from './mainViews.js'
+import {loginGoogle} from '../models/begin.js'
 
 export const principal = ()=> {
     const root = document.getElementById("root");
@@ -10,17 +11,23 @@ export const principal = ()=> {
         <img src="img/plogo2.png" class="logo">
         <button id="btnRegistry">Regístrate</button>
         <button id="btnLogin">Iniciar Sesión</button>
+        <button id="btnGoogle">Google</button>
     </div>
     </div>`
 
     const btnRegistry=document.getElementById("btnRegistry");
     btnRegistry.addEventListener('click', ()=>{ 
-        register()
+        register();
     })
     
     const btnLogin=document.getElementById("btnLogin");
     btnLogin.addEventListener('click', ()=>{
-        login()
+        login();
+    })
+
+    const btnGoogle=document.getElementById("btnGoogle");
+    btnGoogle.addEventListener("click" , ()=>{
+        loginGoogle();
     })
 }
 
