@@ -1,6 +1,5 @@
 import {closeSesion} from '../models/main.js';
 import {principal} from './beginViews.js';
-// import{viewpost} from './postViews.js';
 import{makePost} from './postViews.js';
 
 export const initial = () => {
