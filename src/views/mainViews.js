@@ -1,6 +1,6 @@
-import {closeSesion} from '../models/main.js'
+import {closeSesion} from '../models/main.js';
 import {principal} from './beginViews.js';
-import{viewpost}from './postViews.js';
+import{makePost} from './postViews.js';
 
 export const initial = () => {
     const root = document.getElementById("root");
@@ -109,7 +109,7 @@ export const initial = () => {
     })
     const btnLocal = document.getElementById("btnLocal");
     btnLocal.addEventListener("click", ()=>{
-        viewpost();  
+        makePost();  
     })
     
 }

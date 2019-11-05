@@ -1,7 +1,6 @@
 import{printPost} from '../views/postViews.js';
 import{btnpost} from'../views/postViews.js';
 
-//escribir post
 export const writepost=(post2)=>{
 
     database.collection("restaurantes").add({
@@ -15,7 +14,6 @@ export const writepost=(post2)=>{
     });
 };
 
-//Leer Post
 export const readpost=(read)=>{
     
     database.collection("restaurantes").onSnapshot((querySnapshot) => {

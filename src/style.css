@@ -47,6 +47,10 @@ body, html{
     background-image: linear-gradient(to right, #f5c42e, #f2a221, #ea8020, #de5d25, #cd382c);
 }
 
+#btnGoogle{
+    color: white;
+}
+
 input{
     width: 70%;
     height: 20px;
@@ -166,11 +170,9 @@ h4{
     font-family: sans-serif;
     font-size: 20px;
 }
+
 /*** Pagina inicial ***/
-#btnbest{
-    color:yellow;
-    cursor: pointer;
-}
+
 .titleCarousel{
     width: 90%;
     height: 20px;
@@ -209,6 +211,7 @@ h2{
     margin-right: 5%;
     position: relative;
 }
+
 .btnLocal{
     width: 120px;
     height: 120px;
@@ -327,6 +330,72 @@ h2{
     font-weight: 100;
 }
 
+/* Info Local */
+.imgLocalInfo{
+    width: 100%;
+    height: 200px;
+}
+
+.imgLocalInfo img{
+    width: 100%;
+    height: 100%;
+}
+
+.containerButtons{
+    width: 90%;
+    height: 30px;
+    margin: 0 5%;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.comments, .information{
+    width: 45%;
+    color: white;
+    background-color: none;
+    cursor: pointer;
+}
+
+.centerBtn{
+    width: 100%;
+    height: 50px;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    overflow-x: auto;
+    background-color: black;
+}
+
+.btnComment{
+    width: 50px;
+    height: 50px;
+    background-image: linear-gradient(to right, #f5c42e, #f2a221, #ea8020, #de5d25, #cd382c);
+    border: none;
+	border-radius: 50%;
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.containerPost{
+    border: 1px solid red;
+    width: 90%;
+    height: 280px;
+    padding: 10px 5%;
+    display: flex;
+    flex-direction: nowrap;
+    overflow-y: auto;
+}
+
+
 /* POST */
 .post{
     border: 1px solid red;
@@ -351,10 +420,11 @@ h2{
     display: block;
 }
 .postear{
-    border: 1px solid red;
     border: 1px solid #000000;
+    background-image: linear-gradient(to right bottom, #f5c42e, #f2a221, #ea8020, #de5d25, #cd382c);
     background-color:lightblue;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
     margin-bottom: 10px;
 }
+
