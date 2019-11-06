@@ -1,3 +1,4 @@
+import {login} from '../views/beginViews.js'
 export const registerUser = (nameRegistry, mailRegistry, passwordRegistry) =>{
     firebase.auth().createUserWithEmailAndPassword(mailRegistry, passwordRegistry)
     .then (function(){
@@ -32,7 +33,8 @@ export const loginUser = (mailLogin,passwordLogin) => {
        console.log(errorCode);
        var errorMessage = error.message;
        console.log(errorMessage);
-       alert("Usuario y/o contraseña son incorrectos")
+       login();
+      7
     });
 }
 
