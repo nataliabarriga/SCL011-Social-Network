@@ -95,7 +95,6 @@ export const initial = () => {
 
     const btnbest = document.getElementById("btnbest");
     btnbest.addEventListener("click", ()=>{
-
         viewpost();
     })
     

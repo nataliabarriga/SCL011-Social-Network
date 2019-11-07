@@ -45,7 +45,7 @@ body{
     margin: 10px 0 80px 0;
 }
 
-#btnRegistry, #btnLogin, #btnRegistryOk, #btnLoginOk, #btnAll{
+#btnRegistry, #btnLogin, #btnRegistryOk, #btnLoginOk, #btnAll, #btnGoogle{
     width: 60%;
     height: 30px;
     margin: 20px 20% 0 20%;

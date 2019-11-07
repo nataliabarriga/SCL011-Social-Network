@@ -80,7 +80,9 @@ export const login = () => {
                  <input id="mailLogin" type="email" placeholder="Ingresa tu E-mail">
                 <input id="passwordLogin" type="password" placeholder="Ingresa tu contraseña">
                 <button id="btnLoginOk">Iniciar Sesión</button>
+                <button id="btnGoogle"> Iniciar con Google</button>
                 </form>
+                
         </div>`
 
     const btnLoginOk = document.getElementById("btnLoginOk");

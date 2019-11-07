@@ -34,7 +34,7 @@ export const loginUser = (mailLogin,passwordLogin) => {
        var errorMessage = error.message;
        console.log(errorMessage);
        login();
-      7
+       alert("mail y/o contraseña incorrecta");
     });
 }
 
