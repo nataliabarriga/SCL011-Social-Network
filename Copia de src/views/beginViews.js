@@ -54,7 +54,7 @@ export const register = () =>{
     })
 }
 
-    const modalRegistry = () =>{
+const modalRegistry = () =>{
     const container=document.getElementById("root");
     container.innerHTML = "";
     container.innerHTML +=
