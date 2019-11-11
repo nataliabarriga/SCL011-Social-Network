@@ -61,11 +61,10 @@ export const deletepost=(id)=>{
 
 export const editpost=(id,index)=>{
 
-    //console.log(id);
     const post2=document.getElementById("textpost"+ index).textContent;
     const postnew=document.getElementById("escrito");
-      postnew.innerHTML =post2;
-    //console.log(post2);
+    postnew.innerHTML =post2;
+
 
    const btnedit=document.getElementById("edit"+index);
    btnedit.innerHTML='Guardar';
