@@ -8,7 +8,20 @@
    <title>Social Network</title>
 </head>
 <body>
-   <div id="root"></div>
+   <div id="root">
+         <div class="postear">
+               <p>${valor}</p>
+               <i class="far fa-star"></i>
+               <button class="btnEdit" id="edit${index}">Editar</button>
+               <button class="btnDelete" id="delete${index}" >Borrar</button>
+               <div class="likeBox">
+                  <button id="btnLike" class="btnLike"><img src="img/like1.png" class="imgLike"></button>
+                  <h4 id="counter" class="counter">0</h4>
+               </div>
+           </div>
+
+      
+   </div>
    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-app.js"></script>
    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-analytics.js"></script>
    <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-auth.js"></script>

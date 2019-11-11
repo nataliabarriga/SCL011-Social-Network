@@ -41,8 +41,6 @@ export const readpost=(read)=>{
             btnpost(datapostid[index],index); 
                 
         });
-       
-
     });
 };
 //Borrar post
@@ -65,32 +63,26 @@ export const editpost=(id,index)=>{
     const postnew=document.getElementById("escrito");
     postnew.innerHTML =post2;
 
+    const btnedit=document.getElementById("edit"+index);
+    btnedit.innerHTML='Guardar';
 
-   const btnedit=document.getElementById("edit"+index);
-   btnedit.innerHTML='Guardar';
+    btnedit.addEventListener ("click",()=>{
+        let restaurantRef = database.collection("restaurantes").doc(id);
+        // Set the "capital" field of the city 'DC'
+        let post2=document.getElementById("escrito").value;
 
-   btnedit.addEventListener ("click",()=>{
+        return restaurantRef.update({
+            post:post2
+        })
 
-    let restaurantRef = database.collection("restaurantes").doc(id);
-    // Set the "capital" field of the city 'DC'
-    let post2=document.getElementById("escrito").value;
-
-    return restaurantRef.update({
-    
-        post:post2
+        .then(function() {
+            console.log("Document successfully updated!");
+            btnedit.innerHTML='Editar';
+            document.getElementById("escrito").value="";
+        })
+        .catch(function(error) {
+            // The document probably doesn't exist.
+            console.error("Error updating document: ", error);
+        })
     })
-    .then(function() {
-        
-        console.log("Document successfully updated!");
-        btnedit.innerHTML='Editar';
-        document.getElementById("escrito").value="";
-
-    })
-    .catch(function(error) {
-        // The document probably doesn't exist.
-        console.error("Error updating document: ", error);
-    });
-
-   })
-
 }

@@ -40,6 +40,7 @@ export const viewpost = () => {
     root.innerHTML = 
     `<button id="btnBackLocal"><img src="img/arrow.png" class="imgArrow"></button> 
     <div class="publicationsPost" id="publicationsPost"></div>
+    <div class="alertPost" id="alertPost"></div>
     <div class="post">
         <textarea id="escrito"  rows="4"  placeholder="Ingrese mensaje" ></textarea><br>
         <button class="send" id="send">P</button>
@@ -52,9 +53,21 @@ export const viewpost = () => {
     btnSend.addEventListener("click",()=>{
         const post2= document.getElementById("escrito").value;
         const read=document.getElementById("publicationsPost");
-      
+       
+       
+        if(post2 ==""){
+        const alertPost=document.getElementById("alertPost");
+         alertPost.innerHTML="Por favor escribir publicación"   
+
+      }
+      else{
+        const alertPost=document.getElementById("alertPost");
+        alertPost.innerHTML="" 
         writepost(post2);
         readpost(read);
+        
+      }
+       
     })
 
     const btnBackLocal=document.getElementById("btnBackLocal");
@@ -63,12 +76,14 @@ export const viewpost = () => {
     })
 }
 
-export const printPost=(valor,index)=>{
+export const printPost= (valor,index)=>{
     return `
     <div class="postear">
         <p id="textpost${index}">${valor}</p>
         <button class="btnEdit" id="edit${index}">Editar</button>
         <button class="btnDelete" id="delete${index}" >Borrar</button>
+        <button id="btnLike" class="btnLike"><img src="img/like1.png" class="imgLike"></button>
+        <h4 id="counter" class="counter">0</h4>
     </div> `; 
 }
 
@@ -77,12 +92,6 @@ export const btnpost=(id,index)=>{
    
     btndelete.addEventListener("click",()=>{
         
-        
-      /*let confirmpost = confirm("¿Esta seguro/a de eliminar su publicación?");
-        if (confirmpost== true) {
-        deletepost(id);
-        } */
-        //console.log("borrando post");
      deletepost(id);
 
     })
