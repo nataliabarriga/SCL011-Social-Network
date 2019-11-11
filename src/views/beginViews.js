@@ -11,7 +11,7 @@ export const principal = ()=> {
         <img src="img/plogo2.png" class="logo">
         <button id="btnRegistry">Regístrate</button>
         <button id="btnLogin">Iniciar Sesión</button>
-        <button id="btnGoogle">Google</button>
+        <button id="btnGoogle"><img src="img/google1.png">Acceder con Google</button>
     </div>
     </div>`
 

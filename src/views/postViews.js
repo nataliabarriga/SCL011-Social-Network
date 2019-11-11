@@ -69,23 +69,38 @@ export const printPost= (valor,index)=>{
         <p id="textpost${index}">${valor}</p>
         <button class="btnEdit" id="edit${index}">Editar</button>
         <button class="btnDelete" id="delete${index}" >Borrar</button>
-        <button id="btnLike" class="btnLike"><img src="img/like1.png" class="imgLike"></button>
-        <h4 id="counter" class="counter">0</h4>
+        <div class="likeBox">
+            <button id="btnLike" class="btnLike"><img src="img/like1.png" class="imgLike"></button>
+            <h4 id="counter" class="counter">0</h4>
+         </div>
     </div> `; 
 }
 
 export const btnpost=(id,index)=>{
+
     const btndelete=document.getElementById("delete"+index);
    
     btndelete.addEventListener("click",()=>{
-        
-        
-      /*let confirmpost = confirm("¿Esta seguro/a de eliminar su publicación?");
-        if (confirmpost== true) {
+        const root = document.getElementById("root");
+    root.innerHTML =
+    `<div class="modalContainerDelete">
+        <div class="modalInfoDelete">
+            <h1>¿Seguro que quieres borrar este post?</h1>
+            <button id="btnYes" class="btnYes">Si</button>
+            <button id="btnNo" class="btnNo">No</button>
+        </div>
+    </div>`
+
+    const btnYes = document.getElementById("btnYes");
+    btnYes.addEventListener("click", ()=>{
         deletepost(id);
-        } */
-        //console.log("borrando post");
-     deletepost(id);
+        makePost();
+    })
+
+    const btnNo = document.getElementById("btnNo");
+    btnNo.addEventListener("click", ()=>{
+        makePost();
+    })
 
     })
 
@@ -97,4 +112,3 @@ export const btnpost=(id,index)=>{
    })
    
 }
-
