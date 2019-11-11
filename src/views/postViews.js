@@ -1,5 +1,5 @@
 import {initial} from '../views/mainViews.js'
-import{writepost} from '../models/post.js';
+import{writepost, editpost} from '../models/post.js';
 import{readpost} from '../models/post.js';
 import{deletepost} from '../models/post.js';
 
@@ -66,8 +66,8 @@ export const viewpost = () => {
 export const printPost= (valor,index)=>{
     return `
     <div class="postear">
+        <p id="textpost${index}">${valor}</p>
         <p>${valor}</p>
-        <i class="far fa-star"></i>
         <button class="btnEdit" id="edit${index}">Editar</button>
         <button class="btnDelete" id="delete${index}" >Borrar</button>
         <button id="btnLike" class="btnLike"><img src="img/like1.png" class="imgLike"></button>
@@ -99,11 +99,25 @@ export const printPost= (valor,index)=>{
 
 export const btnpost=(id,index)=>{
     const btndelete=document.getElementById("delete"+index);
-    console.log('Eventboton'+index+' creado');
+   
     btndelete.addEventListener("click",()=>{
-        console.log("borrando post");
-        console.log(index);
+        
+        
+      /*let confirmpost = confirm("¿Esta seguro/a de eliminar su publicación?");
+        if (confirmpost== true) {
         deletepost(id);
+        } */
+        //console.log("borrando post");
+     deletepost(id);
+
     })
+
+   const btnedit=document.getElementById("edit"+index);
+   btnedit.addEventListener("click",()=>{
+
+    editpost(id,index);
+    console.log("editando post")
+   })
+   
 }
 
