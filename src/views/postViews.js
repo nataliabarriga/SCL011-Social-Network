@@ -67,35 +67,12 @@ export const printPost= (valor,index)=>{
     return `
     <div class="postear">
         <p id="textpost${index}">${valor}</p>
-        <p>${valor}</p>
         <button class="btnEdit" id="edit${index}">Editar</button>
         <button class="btnDelete" id="delete${index}" >Borrar</button>
         <button id="btnLike" class="btnLike"><img src="img/like1.png" class="imgLike"></button>
         <h4 id="counter" class="counter">0</h4>
     </div> `; 
 }
-
-// export const printPost= (valor,index)=>{
-//     return `
-//     <div class="postear">
-//         <p>${valor}</p>
-//         <i class="far fa-star"></i>
-//         <button class="btnEdit" id="edit${index}">Editar</button>
-//         <button class="btnDelete" id="delete${index}" >Borrar</button>
-//         <button id="btnLike${index}" class="btnLike">Like</button>
-//         <h4 id="counter${index}" class="counter">0</h4>
-//     </div> `; 
-// }
-
-// export const btnLike = (id, index) =>{
-//     let contador = 0;
-//     const btnLike = document.getElementById("btnLike"+index);
-//     btnLike.addEventListener("click", ()=>{   
-//     document.getElementById("counter"+index).innerHTML = contador += 1;
-// });
-
-// }
-
 
 export const btnpost=(id,index)=>{
     const btndelete=document.getElementById("delete"+index);

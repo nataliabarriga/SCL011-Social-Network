@@ -469,10 +469,22 @@ h2{
     font-weight: 200;
 }
 
+.likeBox{
+    border: 1px solid blue;
+    width: 35px;
+    height: 60px;
+    margin: 0;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
 .btnLike{
-    border: 1px solid red;
     width: 25px;
     height: 25px;
+    border: none;
     background: none;
     float: right;
     display: flex;
@@ -485,6 +497,8 @@ h2{
 }
 
 .counter{
+    font-size: 10px;
+    font-weight: 200;
     float: right;
     color: white;
 }
