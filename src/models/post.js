@@ -1,5 +1,6 @@
 import{printPost} from '../views/postViews.js';
 import{btnpost} from'../views/postViews.js';
+// import{btnLike} from'../views/postViews.js';
 
 // Escribir post
 export const writepost=(post2)=>{
@@ -41,8 +42,6 @@ export const readpost=(read)=>{
             btnpost(datapostid[index],index); 
                 
         });
-       
-
     });
 };
 //Borrar post
@@ -91,7 +90,3 @@ export const editpost=(id,index)=>{
         // The document probably doesn't exist.
         console.error("Error updating document: ", error);
     });
-
-   })
-
-}

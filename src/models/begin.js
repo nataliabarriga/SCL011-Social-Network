@@ -34,7 +34,6 @@ export const loginUser = (mailLogin,passwordLogin) => {
        var errorMessage = error.message;
        console.log(errorMessage);
        login();
-      
     });
 }
 
