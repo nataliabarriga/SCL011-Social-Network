@@ -1,5 +1,6 @@
 import{printPost} from '../views/postViews.js';
 import{btnpost} from'../views/postViews.js';
+// import{btnLike} from'../views/postViews.js';
 
 export const writepost=(post2)=>{
 
@@ -40,6 +41,11 @@ export const readpost=(read)=>{
             btnpost(datapostid[index],index); 
                 
         });
+        // datapost.forEach((valor,index)=>{
+    
+        //     btnLike(datapostid[index],index); 
+                
+        // });
     });
 };
 //Borrar post
@@ -52,5 +58,6 @@ export const deletepost=(id)=>{
     console.error("Error removing document: ", error);
 });
 
-
 };
+
+/* Función de likes */

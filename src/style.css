@@ -400,6 +400,7 @@ h2{
 }
 
 .publicationsInfo{
+    border: 1px solid blue;
     width: 100%;
     height: 300px;
     padding: 0;
@@ -416,6 +417,7 @@ h2{
 }
 
 .postear{
+    border: 1px solid yellow;
     width: 90%;
     margin: 0;
     padding: 5px 15px;
@@ -426,8 +428,9 @@ h2{
 }
 
 .btnEdit, .btnDelete{
+    border: 1px solid green;
     color: #f5c42e;
-    border: none;
+    /* border: none; */
     background: none;
     font-size: 8px;
     font-weight: 100;
@@ -464,6 +467,26 @@ h2{
     background-image: linear-gradient(to right, #f5c42e, #f2a221, #ea8020, #de5d25, #cd382c);
     font-size: 15px;
     font-weight: 200;
+}
+
+.btnLike{
+    border: 1px solid red;
+    width: 25px;
+    height: 25px;
+    background: none;
+    float: right;
+    display: flex;
+    justify-content: center;
+}
+
+.btnLike img{
+    width: 25px;
+    height: 25px;
+}
+
+.counter{
+    float: right;
+    color: white;
 }
 
 
