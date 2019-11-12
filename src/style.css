@@ -34,7 +34,7 @@ body, html{
     margin: 10px 0 80px 0;
 }
 
-#btnRegistry, #btnLogin, #btnRegistryOk, #btnLoginOk, #btnAll{
+#btnRegistry, #btnLogin, #btnRegistryOk, #btnLoginOk, #btnAll, #btnGoogle{
     width: 60%;
     height: 30px;
     margin: 20px 20% 0 20%;
@@ -48,7 +48,20 @@ body, html{
 }
 
 #btnGoogle{
-    color: white;
+    background-image:none;
+    background-color: white;
+    padding:0;
+    color: #de5d25;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnGoogle img{
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
 }
 
 input{
@@ -63,7 +76,7 @@ input{
 }
 
 /*** Modal de registro ***/
-.modalContainer, .modalMenuContainer{
+.modalContainer, .modalMenuContainer, .modalContainerDelete{
     position: fixed;
     left: 0;
     top: 0;
@@ -73,7 +86,7 @@ input{
     background-color: black;
 }
 
-.modalInfo{
+.modalInfo, .modalInfoDelete{
     width: 65%;
     height: 200px;
     margin: 50% 10%;
@@ -90,8 +103,10 @@ input{
     margin: 0;
 }
 
-.modalInfo h1{
-    font-size: 28px;
+.modalInfo h1, .modalInfoDelete h1{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 300;
     color: white;
     margin: 20px 0 10px 0;
 }
@@ -400,7 +415,6 @@ h2{
 }
 
 .publicationsInfo{
-    border: 1px solid blue;
     width: 100%;
     height: 300px;
     padding: 0;
@@ -417,7 +431,6 @@ h2{
 }
 
 .postear{
-    border: 1px solid yellow;
     width: 90%;
     margin: 0;
     padding: 5px 15px;
@@ -428,9 +441,8 @@ h2{
 }
 
 .btnEdit, .btnDelete{
-    border: 1px solid green;
     color: #f5c42e;
-    /* border: none; */
+    border: none;
     background: none;
     font-size: 8px;
     font-weight: 100;
@@ -470,10 +482,9 @@ h2{
 }
 
 .likeBox{
-    border: 1px solid blue;
     width: 35px;
     height: 60px;
-    margin: 0;
+    margin-top: -30px;
     float: right;
     display: flex;
     flex-direction: column;
@@ -484,6 +495,7 @@ h2{
 .btnLike{
     width: 25px;
     height: 25px;
+    margin-bottom: 5px;
     border: none;
     background: none;
     float: right;
@@ -492,7 +504,6 @@ h2{
 }
 
 .btnLike img{
-    width: 25px;
     height: 25px;
 }
 
@@ -500,9 +511,20 @@ h2{
     font-size: 10px;
     font-weight: 200;
     float: right;
-    color: white;
+    background: -webkit-linear-gradient(left top, yellow, red);
+    background: linear-gradient(to bottom right, yellow,  red); 
+    -webkit-text-fill-color: transparent;
 }
 
 .alertPost{
     color:white;
+}
+.btnYes, .btnNo{
+    width: 60px;
+    height: 30px;
+    margin:50px 20px 0 20px;
+    border: none;
+    border-radius: 20px;
+    background: white;
+    color: #de5d25;
 }
