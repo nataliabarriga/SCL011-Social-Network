@@ -512,12 +512,13 @@ h2{
     font-weight: 200;
     float: right;
     background: -webkit-linear-gradient(left top, yellow, red);
-    background: linear-gradient(to bottom right, yellow,  red); 
+    background: linear-gradient(to bottom right, yellow,  red);
     -webkit-text-fill-color: transparent;
 }
 
 .alertPost{
     color:white;
+    justify-content: center;
 }
 .btnYes, .btnNo{
     width: 60px;
