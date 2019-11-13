@@ -40,6 +40,7 @@ export const viewpost = () => {
     root.innerHTML = 
     `<button id="btnBackLocal"><img src="img/arrow.png" class="imgArrow"></button> 
     <div class="publicationsPost" id="publicationsPost"></div>
+    <div class="alertPost" id="alertPost"></div>
     <div class="post">
         <textarea id="escrito"  rows="4"  placeholder="Ingrese mensaje" ></textarea><br>
         <button class="send" id="send">P</button>
@@ -52,9 +53,21 @@ export const viewpost = () => {
     btnSend.addEventListener("click",()=>{
         const post2= document.getElementById("escrito").value;
         const read=document.getElementById("publicationsPost");
-      
+       
+       
+        if(post2 ==""){
+        const alertPost=document.getElementById("alertPost");
+         alertPost.innerHTML="Por favor escribir publicación"   
+
+      }
+      else{
+        const alertPost=document.getElementById("alertPost");
+        alertPost.innerHTML="" 
         writepost(post2);
         readpost(read);
+        
+      }
+       
     })
 
     const btnBackLocal=document.getElementById("btnBackLocal");

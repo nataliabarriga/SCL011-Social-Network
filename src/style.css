@@ -516,6 +516,10 @@ h2{
     -webkit-text-fill-color: transparent;
 }
 
+.alertPost{
+    color:white;
+    justify-content: center;
+}
 .btnYes, .btnNo{
     width: 60px;
     height: 30px;
