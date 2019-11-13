@@ -58,9 +58,8 @@ export const viewpost = () => {
         if(post2 ==""){
         const alertPost=document.getElementById("alertPost");
          alertPost.innerHTML="Por favor escribir publicación"   
-
-      }
-      else{
+        }
+        else{
         const alertPost=document.getElementById("alertPost");
         alertPost.innerHTML="" 
         writepost(post2);
