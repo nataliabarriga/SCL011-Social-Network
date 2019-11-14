@@ -11,6 +11,8 @@ export const principal = ()=> {
         <img src="img/plogo2.png" class="logo">
         <button id="btnRegistry">Regístrate</button>
         <button id="btnLogin">Iniciar Sesión</button>
+        <button id="btnGoogle"><img src="img/google1.png">Acceder con Google</button>
+
     </div>
     </div>`
 
@@ -54,7 +56,7 @@ export const register = () =>{
     })
 }
 
-const modalRegistry = () =>{
+    const modalRegistry = () =>{
     const container=document.getElementById("root");
     container.innerHTML = "";
     container.innerHTML +=
