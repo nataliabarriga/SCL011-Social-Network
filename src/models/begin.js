@@ -1,4 +1,5 @@
 import {login} from '../views/beginViews.js'
+import {initial} from '../views/mainViews.js'
 export const registerUser = (nameRegistry, mailRegistry, passwordRegistry) =>{
     firebase.auth().createUserWithEmailAndPassword(mailRegistry, passwordRegistry)
     .then (function(){
@@ -34,6 +35,7 @@ export const loginUser = (mailLogin,passwordLogin) => {
        var errorMessage = error.message;
        console.log(errorMessage);
        login();
+       alert("mail y/o contraseña incorrecta");
     });
 }
 
@@ -63,12 +65,15 @@ export const loginGoogle = () =>{
     .then(function(result) {
         var token = result.credential.accessToken;
         var user = result.user;
+        initial();
+        console.log("Google login successful")
     })
     .catch(function(error) {
         var errorCode = error.code;
         var errorMessage = error.message;
         var email = error.email;
         var credential = error.credential;
+        console.log("Google login error > "+error.message)
     });
     
 }
