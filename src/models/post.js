@@ -18,11 +18,10 @@ export const writepost=(post2)=>{
 
 // Leer post
 export const readpost=(read)=>{
-    
     database.collection("restaurantes").onSnapshot((querySnapshot) => {
         let datapost=[];
         let datapostid=[];
-
+        
         querySnapshot.forEach((doc) => {   
         
             datapost.push(`${doc.data().post}`);
@@ -47,9 +46,11 @@ export const readpost=(read)=>{
 
 export const deletepost=(id)=>{
     
-    database.collection("restaurantes").doc(id).delete().then(function() {
+    database.collection("restaurantes").doc(id).delete()
+    .then(function() {
     console.log("Document successfully deleted!");
-}).catch(function(error) {
+    })
+    .catch(function(error) {
     console.error("Error removing document: ", error);
 });
 };

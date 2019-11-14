@@ -36,7 +36,7 @@ Obviamente en el ámbito más técnico de la programación, nos hubiera gustado,
 # Desarrolladoras
 
 - Natalia Barriga
-- Irene Monzom
+- Irene Monzon
 - Daniela Olivares
 
 
