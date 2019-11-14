@@ -39,7 +39,6 @@ export const register = () =>{
     <img src="img/plogo2.png" class="logo">
     <input id="nameRegistry" type="text" placeholder="Ingresa tu Nombre">
     <input id="mailRegistry" type="email" placeholder="Ingresa tu E-mail">
-    <input id="passwordRegistry" type="password" placeholder="Ingresa tu Contraseña">
     <button id="btnRegistryOk">Registrarse</button>
     </form>
     </div>`

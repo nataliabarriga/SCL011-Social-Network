@@ -1,4 +1,5 @@
 import {login} from '../views/beginViews.js'
+import {initial} from '../views/mainViews.js'
 export const registerUser = (nameRegistry, mailRegistry, passwordRegistry) =>{
     firebase.auth().createUserWithEmailAndPassword(mailRegistry, passwordRegistry)
     .then (function(){
@@ -63,6 +64,7 @@ export const loginGoogle = () =>{
     .then(function(result) {
         var token = result.credential.accessToken;
         var user = result.user;
+        initial();
     })
     .catch(function(error) {
         var errorCode = error.code;
